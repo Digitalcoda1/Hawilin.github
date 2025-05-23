@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hawailin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0f0f0f, #1f1f1f, #0f2e0f);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 28px;
+      color: #8aff9c;
+      font-weight: bold;
+    }
+    .menu-icon {
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    .dropdown {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      z-index: 1001;
+    }
+    .dropdown a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid #444;
+    }
+    .dropdown a:hover {
+      background-color: #333;
+    }
+    .main-content {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .main-img {
+      max-width: 300px;
+      margin: 20px auto;
+      display: block;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #d4ffd8;
+    }
+    .ai-note {
+      font-size: 1.5rem;
+      color: red;
+      margin: 30px 0 10px;
+    }
+    .start-button {
+      background: linear-gradient(to right, #000000, #8b0000, #006400);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .start-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #111, #a80000, #00a000);
+    }
+    .description {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #c9c9c9;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      background-color: #00000070;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Hawailin</div>
+    <div style="position: relative;">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <div class="dropdown" id="dropdownMenu">
+        <a href="mailto:Blomering@gmail.com">Ayuda</a>
+        <a href="terminos_condiciones_hawailin.html" target="_blank">Términos y condiciones</a>
+        <a href="https://www.tiktok.com/@vigorgt" target="_blank">Nuestras redes (TikTok)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <img src="imagen1.png" alt="Diseños" class="main-img" />
+    <h1>Hawailin</h1>
+    <p class="tagline">Una página diseñada para los usuarios que quieren hacer sus propios diseños, totalmente gratis para todo público</p>
+
+    <div class="ai-note">Página creada por AI todo esto para ti</div>
+    <button class="start-button">Comenzar</button>
+
+    <div class="description">
+      En Hawailin puedes diseñar tu propia ropa, calzado, gorras y más artículos exclusivos. Ya sea para uso personal o tu negocio, esta plataforma es ideal para que lleves tus ideas a la realidad.<br><br>
+      Tenemos más de 20 modelos de zapatos, distintas categorías de ropa, opciones para personalizar tus marcas y próximamente funciones premium para potenciar tu creatividad.
+    </div>
+  </main>
+
+  <footer>
+    Hawailin tu página de confianza — 2025 — contacto: Blomering@gmail.com
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
