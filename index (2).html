@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hawailin - Inicio</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #000000, #0f2e0f);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #8aff9c;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .start-button {
+      background: linear-gradient(to right, #000000, #8b0000, #006400);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .start-button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <script>
+    function iniciarEncuesta() {
+      document.body.style.transition = "opacity 1s";
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = 'pantalla5_encuesta.html';
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <h1>Hawailin</h1>
+  <p>Una página diseñada para los usuarios que quieren hacer sus propios diseños. Totalmente gratis.</p>
+  <button class="start-button" onclick="iniciarEncuesta()">Comenzar</button>
+</body>
+</html>
